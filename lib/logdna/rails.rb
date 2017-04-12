@@ -1,11 +1,13 @@
 require 'http'
 require 'active_support/logger'
 require 'logdna'
-require_relative './rails/version'
 
 module LogDNA
   class RailsLogger < ActiveSupport::Logger
     include LogDNA
+
+    attr_reader :open
+    attr_accessor :api_key, :host, :default_app, :ip, :mac
 
     def initialize(api_key, hostname, options = {})
       @conn = HTTP.persistent LogDNA::INGESTER_DOMAIN

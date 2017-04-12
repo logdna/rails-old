@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'logdna/rails/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'logdna-rails'
-  spec.version       = LogDNA::RailsLogger::VERSION
+  spec.version       = '0.0.1'
   spec.author        = 'Edwin Lai'
   spec.email         = 'edwin@logdna.com'
 
